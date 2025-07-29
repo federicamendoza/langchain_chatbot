@@ -75,10 +75,10 @@ def get_mysql_data(table_name: str, query: str = None) -> list[str]:
                 requisiti = clean_html(row_dict.get("requisiti", ""))
 
                 page_content = ", ".join([
+                    f"COSTO DEL CORSO: {row_dict.get('MaxCostoFormat', '')}",
                     f"titolo: {row_dict.get('titolo', '')}",
                     f"descrizione: {descrizione}",
                     f"requisiti: {requisiti}",
-                    f"COSTO DEL CORSO: {row_dict.get('MaxCostoFormat', '')}",
                     f"ore: {row_dict.get('ore', '')}",
                     f"datasito: {row_dict.get('datasito', '')}"
                 ])
